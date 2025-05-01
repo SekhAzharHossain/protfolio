@@ -44,14 +44,14 @@ const Projects = () => {
         >
           <h2 className="text-3xl font-bold text-foreground mb-8">Featured Projects</h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {projects.map((project) => (
               <motion.div
                 key={project.title}
                 whileHover={{ y: -5 }}
                 className="bg-card rounded-sm shadow-lg overflow-hidden group"
               >
-                <div className="relative h-48 overflow-hidden p-1">
+                <div className="relative h-48 overflow-hidden p-1 bg-gray-200">
                   <img
                     src={project.image}
                     alt={project.title}

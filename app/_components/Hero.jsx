@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import GradientText from "./GradientText";
 
 const Hero = () => {
   return (
@@ -16,8 +17,16 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
             Hi, I'm <span className="text-indigo-600 dark:text-indigo-400">Sekh Azhar Hossain</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Frontend Developer crafting beautiful web experiences
+          <p className="text-xl md:text-2xl font-bold text-muted-foreground mb-8">
+            <GradientText
+              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+              animationSpeed={8}
+              showBorder={false}
+              className="custom-class"
+            >
+              Frontend Developer crafting beautiful web experiences
+            </GradientText>
+            
           </p>
           <div className="flex justify-center gap-4">
             <Button
