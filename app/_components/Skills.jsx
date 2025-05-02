@@ -1,20 +1,24 @@
 'use client'
 import { motion } from "framer-motion";
-
 const skills = [
+  "Next.js",
   "React",
   "TypeScript",
-  "JavaScript",
-  "HTML/CSS",
-  "Tailwind CSS",
-  "Node.js",
-  "Git",
+  "Tailwind CSS / Shadcn UI / Material UI",
+  "Zustand",
+  "Git/GitHub",
+  "HTML5/CSS3",
+  "Framer Motion",
   "RESTful APIs",
+  "Responsive Design",
+  "Accessibility",
+  "VS Code"
 ];
 
  const Skills = () => {
   return (
     <section id="skills" className="py-20 bg-background">
+      
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -8,7 +8,8 @@ import Footer from "./_components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-inter">
+    <div className="min-h-screen font-inter w-full" suppressHydrationWarning={true}>
+
       <Navbar />
       <Hero />
       <About />

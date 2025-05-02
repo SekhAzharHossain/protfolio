@@ -1,12 +1,22 @@
 'use client'
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Phone } from "lucide-react";
+import { Mail, MessageSquare,X} from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Swal from 'sweetalert2'
+import React,{useEffect,useState} from "react";
+import Link from "next/link";
 
 const Contact = () => {
+
+  const [isClient, setIsClient]=useState(false);
+  useEffect(()=>{
+    setIsClient(true);
+  },[])
+
+  if(!isClient) return null;
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -55,11 +65,11 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
-                  <span className="text-muted-foreground">azhar@example.com</span>
+                  <span className="text-muted-foreground">azharhossain6520@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
-                  <span className="text-muted-foreground">+1234567890</span>
+                  <Linkedin className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
+                  <Link href={'https://www.linkedin.com/in/sekhazharhossain/'} className="text-muted-foreground">Sekh Azhar Hossain</Link>
                 </div>
                 <div className="flex items-center gap-3">
                   <MessageSquare className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
